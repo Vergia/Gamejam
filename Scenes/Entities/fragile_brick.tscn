@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://crhlqqf3iwiqe"]
+
+[ext_resource type="Script" uid="uid://celkk8u4p5jb4" path="res://Scenes/Entities/fragile_brick.gd" id="1_nr3rf"]
+[ext_resource type="Texture2D" uid="uid://d0mtxsivocpp4" path="res://objects/fragile_brick.png" id="1_riqtk"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_l61sd"]
+size = Vector2(16, 16)
+
+[node name="FragileBrick" type="StaticBody2D" unique_id=71893899 groups=["fragile_bricks"]]
+collision_mask = 0
+script = ExtResource("1_nr3rf")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1535333435]
+texture = ExtResource("1_riqtk")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=698396759]
+shape = SubResource("RectangleShape2D_l61sd")

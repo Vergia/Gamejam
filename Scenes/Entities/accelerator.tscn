@@ -1,0 +1,24 @@
+[gd_scene format=3 uid="uid://cteuimw3mh31q"]
+
+[ext_resource type="Script" uid="uid://dvtqbhlpkjn1q" path="res://Scenes/Entities/accelerator.gd" id="1_ds58e"]
+[ext_resource type="Texture2D" uid="uid://dillcw4oxn2y4" path="res://objects/accelerator_deactive.png" id="1_n5xky"]
+[ext_resource type="Texture2D" uid="uid://dbcu6p2pc1qs7" path="res://objects/accelerator_active.png" id="2_ds58e"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_l61sd"]
+size = Vector2(16, 16)
+
+[node name="Accelerator" type="StaticBody2D" unique_id=417515368 groups=["accelerators"]]
+z_index = 1
+collision_layer = 9
+collision_mask = 0
+script = ExtResource("1_ds58e")
+
+[node name="deactive" type="Sprite2D" parent="." unique_id=1271948216]
+texture = ExtResource("1_n5xky")
+
+[node name="active" type="Sprite2D" parent="." unique_id=1633390328]
+visible = false
+texture = ExtResource("2_ds58e")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1117312393]
+shape = SubResource("RectangleShape2D_l61sd")

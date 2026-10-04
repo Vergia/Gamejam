@@ -1,0 +1,23 @@
+[gd_scene format=3 uid="uid://bcyw00ra30sn1"]
+
+[ext_resource type="Texture2D" uid="uid://b7d3w6v55opcb" path="res://objects/button_yellow_off.png" id="1_mnvik"]
+[ext_resource type="Script" uid="uid://djxyb5wnfv2pq" path="res://Scenes/Entities/yellow_button.gd" id="1_wo6es"]
+[ext_resource type="Texture2D" uid="uid://c482m2ht0xxdn" path="res://objects/button_yellow_on.png" id="3_sqfj1"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_l61sd"]
+size = Vector2(24, 8)
+
+[node name="YellowButton" type="Area2D" unique_id=1509335061 groups=["buttons"]]
+collision_layer = 0
+collision_mask = 4
+script = ExtResource("1_wo6es")
+off_texture = ExtResource("1_mnvik")
+on_texture = ExtResource("3_sqfj1")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=445456020]
+position = Vector2(0, -8)
+texture = ExtResource("1_mnvik")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1497496224]
+position = Vector2(0, 4)
+shape = SubResource("RectangleShape2D_l61sd")
